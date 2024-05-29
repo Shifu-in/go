@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "/loading", "dest": "/loading/index.html" },
+    { "src": "/main", "dest": "/main/index.html" },
+    { "src": "/partners", "dest": "/partners/index.html" },
+    { "src": "/money", "dest": "/money/index.html" },
+    { "src": "/superprofit", "dest": "/superprofit/index.html" }
+  ]
+}
