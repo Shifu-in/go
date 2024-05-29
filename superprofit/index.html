@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superprofit</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Superprofit</h1>
+        <p>Game will be available in:</p>
+        <div id="timer">48:00:00</div>
+        <button onclick="window.location.href='../main/index.html'">Back to Main</button>
+    </div>
+    <script>
+        // Timer logic
+        let countdown = 48 * 60 * 60;
+        const timerElement = document.getElementById('timer');
+        
+        function updateTimer() {
+            const hours = Math.floor(countdown / 3600);
+            const minutes = Math.floor((countdown % 3600) / 60);
+            const seconds = countdown % 60;
+            timerElement.innerHTML = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            countdown--;
+            if (countdown >= 0) {
+                setTimeout(updateTimer, 1000);
+            }
+        }
+        
+        updateTimer();
+    </script>
+</body>
+</html>
